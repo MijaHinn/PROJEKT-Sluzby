@@ -63,10 +63,12 @@ p {
 section {
     margin: 0 20px 60px 20px;
     text-align: center;
+    min-width: 460px;
 }
 
 .traveler {
     margin: 60px 55px 0px 55px;
+    max-width: 100%;
 }
 
 .boxy {
@@ -162,7 +164,59 @@ section {
 
 /* --- Počítač:	    1100px a víc --- */
 @media screen and (min-width: 1100px) {
-    
+    section {
+        max-width: 1040px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 80px;
+        margin-top: 60px;
+        text-align: left;
+        gap: 60px;
+        align-items: center;
+    }
 
+    section p {
+        width: auto;
+        text-align: left;
+    }
+
+    .traveler {
+        display: inline-block;
+        margin: 0;
+        max-width: 425px;
+    }
+
+    .flex-image {
+        order: 1;
+        text-align: center;
+        flex-basis: 490px;
+        flex-shrink: 1;
+    }
+
+    .boxy {
+        margin: 0;
+        flex-basis: 550px;
+    }
+
+    .flex-text {
+        flex-basis: 430px;
+    }
+
+    .cestovni-kancelar {
+        order: -1;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+    
+    h1:after {
+        margin-left: 0%;
+    }
+
+    .happy-travels {
+        flex-basis: 490px;
+    }
 
 } 
