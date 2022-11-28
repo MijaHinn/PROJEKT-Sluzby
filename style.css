@@ -60,14 +60,23 @@ p {
 }
 
 /* --- Mobil:		0 - 639px --- */
+.container {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 section {
-    margin: 0 20px 60px 20px;
+    margin: 0;
     text-align: center;
-    min-width: 460px;
+    max-width: 100%;
+    margin-bottom: 60px;
 }
 
 .traveler {
-    margin: 60px 55px 0px 55px;
+    margin: 0;
     max-width: 100%;
 }
 
@@ -104,18 +113,12 @@ section {
 /* --- Tablet:		640px - 1099px --- */
 @media screen and (min-width: 640px) {
     .traveler {
-        display: block;
-        margin: 60px auto 0 auto;
+        align-self: center;
     }
 
     section {
-        margin: 0 20px 80px 20px;
-    }
-
-    section p {
-        max-width: 550px;
-        text-align: center;
-        margin: 0 auto;
+        max-width: 100%;
+        margin-bottom: 80px;
     }
 
     .tlacitka li {
@@ -168,12 +171,15 @@ section {
         max-width: 1040px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        gap: 60px;
+        text-align: left;
         margin: 0 auto;
         margin-bottom: 80px;
-        margin-top: 60px;
-        text-align: left;
-        gap: 60px;
-        align-items: center;
+    }
+
+    .traveler {
+        width: 425px;
     }
 
     section p {
@@ -181,10 +187,10 @@ section {
         text-align: left;
     }
 
-    .traveler {
+    .tlacitka li {
+        padding-top: 0;
+        padding-bottom: 60px;
         display: inline-block;
-        margin: 0;
-        max-width: 425px;
     }
 
     .flex-image {
@@ -192,6 +198,7 @@ section {
         text-align: center;
         flex-basis: 490px;
         flex-shrink: 1;
+        flex-grow: 1;
     }
 
     .boxy {
@@ -217,6 +224,7 @@ section {
 
     .happy-travels {
         flex-basis: 490px;
+        padding-top: 60px;
     }
 
 } 
